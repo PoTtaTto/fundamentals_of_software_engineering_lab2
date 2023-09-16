@@ -39,3 +39,9 @@ class HiringManagement:
         else:
             return driver.id, EvaluateLevel.AWFUL, Car(is_for_training=True, max_speed=47.8)
 
+
+if __name__ == '__main__':
+    beginner = Driver(driving_skill=5)
+    fan = Driver(driving_skill=47)
+    enjoyer = Driver(driving_skill=99)
+    ryan_gosling = Driver(driving_skill=float('inf'))
