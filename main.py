@@ -2,6 +2,13 @@ import uuid
 import enum
 
 
+class EvaluateLevel(enum.Enum):
+    EXCELLENT = 'excellent mark'
+    GOOD = 'good mark'
+    NOT_BAD = 'not bad mark'
+    AWFUL = 'awful mark'
+
+
 class Car:
     def __init__(self, is_for_training: bool, max_speed: float):
         self.is_for_training = is_for_training
