@@ -26,3 +26,16 @@ class Driver:
         self.id = str(uuid.uuid4())
         self.driving_skill = driving_skill
 
+
+class HiringManagement:
+    @staticmethod
+    def evaluate(driver: Driver) -> (str, EvaluateLevel, Car):
+        if driver.driving_skill >= 100:
+            return driver.id, EvaluateLevel.EXCELLENT, Car(is_for_training=False, max_speed=220.5)
+        elif driver.driving_skill >= 60:
+            return driver.id, EvaluateLevel.GOOD, Car(is_for_training=False, max_speed=160.4)
+        elif driver.driving_skill >= 20:
+            return driver.id, EvaluateLevel.NOT_BAD, Car(is_for_training=True, max_speed=90)
+        else:
+            return driver.id, EvaluateLevel.AWFUL, Car(is_for_training=True, max_speed=47.8)
+
