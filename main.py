@@ -45,3 +45,9 @@ if __name__ == '__main__':
     fan = Driver(driving_skill=47)
     enjoyer = Driver(driving_skill=99)
     ryan_gosling = Driver(driving_skill=float('inf'))
+
+    management = HiringManagement()
+    print(management.evaluate(driver=ryan_gosling))
+    print(management.evaluate(driver=enjoyer))
+    print(management.evaluate(driver=fan))
+    print(management.evaluate(driver=beginner))
